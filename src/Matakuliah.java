@@ -1,5 +1,5 @@
 
-public class Matakuliah {
+public class MataKuliah {
     String kode;
     String nama;
     int sks;
