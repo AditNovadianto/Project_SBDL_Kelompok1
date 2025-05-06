@@ -3,7 +3,7 @@ import java.util.List;
 public class Faculty {
     String name;
     String address;
-    List<programStudi> listProdi;
+    List<ProgramStudi> listProdi;
 
     public String getName() {
         return name;
@@ -13,7 +13,7 @@ public class Faculty {
         return address;
     }
 
-    public List<programStudi> getListProdi() {
+    public List<ProgramStudi> getListProdi() {
         return listProdi;
     }
 
@@ -25,7 +25,7 @@ public class Faculty {
         this.address = address;
     }
 
-    public void setListProdi(List<programStudi> listProdi) {
+    public void setListProdi(List<ProgramStudi> listProdi) {
         this.listProdi = listProdi;
     }
 }
