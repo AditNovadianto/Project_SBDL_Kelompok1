@@ -3,7 +3,7 @@ public class KRS {
     int totalSKS;
     int semester;
     String tahunKurikulum;
-    Matakuliah matakuliah;
+    MataKuliah matakuliah;
 
     public void setTotalSKS(int totalSKS) {
         this.totalSKS = totalSKS;
@@ -17,7 +17,7 @@ public class KRS {
         this.tahunKurikulum = tahunKurikulum;
     }
 
-    public void setMatakuliah(Matakuliah matakuliah) {
+    public void setMatakuliah(MataKuliah matakuliah) {
         this.matakuliah = matakuliah;
     }
 }
