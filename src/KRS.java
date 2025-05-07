@@ -6,7 +6,7 @@ public class KRS {
     private int semester;
     private String tahunKurikulum;
     private String periode;
-    private List<MataKuliah> matakuliah;
+    private List<Matakuliah> matakuliah;
 
     // Constructor
     public KRS(int totalSKS, int semester, String tahunKurikulum, String periode) {
@@ -29,7 +29,7 @@ public class KRS {
         this.tahunKurikulum = tahunKurikulum;
     }
 
-    public void setMatakuliah(MataKuliah newMatakuliah) {
+    public void setMatakuliah(Matakuliah newMatakuliah) {
         this.matakuliah.add(newMatakuliah);
     }
 
@@ -45,7 +45,7 @@ public class KRS {
         return totalSKS;
     }
 
-    public List<MataKuliah> getMatakuliah() {
+    public List<Matakuliah> getMatakuliah() {
         return matakuliah;
     }
 }

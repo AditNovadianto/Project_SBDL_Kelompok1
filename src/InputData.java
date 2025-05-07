@@ -8,27 +8,27 @@ public class InputData {
 
         try {
             // 1. Buat MataKuliah
-            MataKuliah mk1 = new MataKuliah("FTK161", "Statistik", 3);
-            MataKuliah mk2 = new MataKuliah("FTK203", "Sistem Basis Data", 3);
-            MataKuliah mk3 = new MataKuliah("TIF206", "Sistem Operasi", 3);
-            MataKuliah mk4 = new MataKuliah("TIF207", "Komunikasi Data", 3);
-            MataKuliah mk5 =
-                    new MataKuliah("TIF211", "Leadership and Management for IT Engineer", 3);
-            MataKuliah mk6 = new MataKuliah("TIF223", "Sistem Dijital", 3);
-            MataKuliah mk7 =
-                    new MataKuliah("UNI106", "Pendidikan Pancasila dan Kewarganegaraan", 3);
-            MataKuliah mk8 = new MataKuliah("UNI101", "Bahasa Indonesia", 2);
-            MataKuliah mk9 = new MataKuliah("FTK103", "Pemrograman Visual", 3);
-            MataKuliah mk10 = new MataKuliah("FTK211", "Kalkulus II", 3);
-            MataKuliah mk11 = new MataKuliah("TIF103", "Matematika Diskrit", 3);
-            MataKuliah mk12 = new MataKuliah("TIF106", "Konsep Sistem Informasi", 3);
-            MataKuliah mk13 = new MataKuliah("TIF109", "Struktur Data", 3);
-            MataKuliah mk14 = new MataKuliah("UNI102", "Agama", 2);
-            MataKuliah mk15 = new MataKuliah("UNI204", "Bahasa Inggris 2", 3);
-            MataKuliah mk16 = new MataKuliah("TIF210", "Informatika Sosial", 2);
-            MataKuliah mk17 = new MataKuliah("TIF310", "Interpersonal Skill", 2);
-            MataKuliah mk18 =
-                    new MataKuliah("FTK403", "Etika Profesi dan Hak Kekayaan Intelektual", 3);
+            Matakuliah mk1 = new Matakuliah("FTK161", "Statistik", 3);
+            Matakuliah mk2 = new Matakuliah("FTK203", "Sistem Basis Data", 3);
+            Matakuliah mk3 = new Matakuliah("TIF206", "Sistem Operasi", 3);
+            Matakuliah mk4 = new Matakuliah("TIF207", "Komunikasi Data", 3);
+            Matakuliah mk5 =
+                    new Matakuliah("TIF211", "Leadership and Management for IT Engineer", 3);
+            Matakuliah mk6 = new Matakuliah("TIF223", "Sistem Dijital", 3);
+            Matakuliah mk7 =
+                    new Matakuliah("UNI106", "Pendidikan Pancasila dan Kewarganegaraan", 3);
+            Matakuliah mk8 = new Matakuliah("UNI101", "Bahasa Indonesia", 2);
+            Matakuliah mk9 = new Matakuliah("FTK103", "Pemrograman Visual", 3);
+            Matakuliah mk10 = new Matakuliah("FTK211", "Kalkulus II", 3);
+            Matakuliah mk11 = new Matakuliah("TIF103", "Matematika Diskrit", 3);
+            Matakuliah mk12 = new Matakuliah("TIF106", "Konsep Sistem Informasi", 3);
+            Matakuliah mk13 = new Matakuliah("TIF109", "Struktur Data", 3);
+            Matakuliah mk14 = new Matakuliah("UNI102", "Agama", 2);
+            Matakuliah mk15 = new Matakuliah("UNI204", "Bahasa Inggris 2", 3);
+            Matakuliah mk16 = new Matakuliah("TIF210", "Informatika Sosial", 2);
+            Matakuliah mk17 = new Matakuliah("TIF310", "Interpersonal Skill", 2);
+            Matakuliah mk18 =
+                    new Matakuliah("FTK403", "Etika Profesi dan Hak Kekayaan Intelektual", 3);
 
             // Simpan mata kuliah ke dalam database
             db.store(mk1);

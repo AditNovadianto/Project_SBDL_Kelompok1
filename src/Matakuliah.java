@@ -1,11 +1,11 @@
 
-public class MataKuliah {
+public class Matakuliah {
     private String kode;
     private String nama;
     private int sks;
 
     // Constructor
-    public MataKuliah(String kode, String nama, int sks) {
+    public Matakuliah(String kode, String nama, int sks) {
         this.kode = kode;
         this.nama = nama;
         this.sks = sks;

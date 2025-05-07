@@ -14,7 +14,7 @@ public class printData {
                 System.out.println(
                         "KRS: " + krs.getTahunKurikulum() + ", Semester: " + krs.getSemester());
                 System.out.println("Mata Kuliah:");
-                for (MataKuliah mk : krs.getMatakuliah()) {
+                for (Matakuliah mk : krs.getMatakuliah()) {
                     System.out.println("Kode: " + mk.getKode() + ", Nama: " + mk.getNama()
                             + ", SKS: " + mk.getSks());
                 }
