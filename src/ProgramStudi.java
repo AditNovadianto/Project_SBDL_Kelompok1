@@ -5,6 +5,12 @@ public class ProgramStudi {
     private String code;
     private List<Mahasiswa> listMahasiswa;
 
+    // Constructor
+    public ProgramStudi(String name, String code) {
+        this.name = name;
+        this.code = code;
+    }
+
     public String getName() {
         return name;
     }
@@ -25,7 +31,7 @@ public class ProgramStudi {
         this.code = code;
     }
 
-    public void setListMahasiswa(List<Mahasiswa> listMahasiswa) {
-        this.listMahasiswa = listMahasiswa;
+    public void addMahasiswa(MahasiswaS1 newMahasiswaS1) {
+        listMahasiswa.add(newMahasiswaS1);
     }
 }

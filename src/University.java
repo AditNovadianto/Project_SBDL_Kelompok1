@@ -3,6 +3,12 @@ public class University {
     private String name;
     private String address;
 
+    // Constructor
+    public University(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
     public String getName() {
         return name;
     }

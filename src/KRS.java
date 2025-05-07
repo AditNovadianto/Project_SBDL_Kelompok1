@@ -1,9 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class KRS {
     private int totalSKS;
     private int semester;
     private String tahunKurikulum;
-    private MataKuliah matakuliah;
+    private String periode;
+    private List<MataKuliah> matakuliah;
+
+    // Constructor
+    public KRS(int totalSKS, int semester, String tahunKurikulum, String periode) {
+        this.totalSKS = totalSKS;
+        this.semester = semester;
+        this.tahunKurikulum = tahunKurikulum;
+        this.periode = periode; // Default value, can be changed later
+        this.matakuliah = new ArrayList<>();
+    }
 
     public void setTotalSKS(int totalSKS) {
         this.totalSKS = totalSKS;
@@ -17,7 +29,23 @@ public class KRS {
         this.tahunKurikulum = tahunKurikulum;
     }
 
-    public void setMatakuliah(MataKuliah matakuliah) {
-        this.matakuliah = matakuliah;
+    public void setMatakuliah(MataKuliah newMatakuliah) {
+        this.matakuliah.add(newMatakuliah);
+    }
+
+    public String getTahunKurikulum() {
+        return tahunKurikulum;
+    }
+
+    public int getSemester() {
+        return semester;
+    }
+
+    public int getTotalSKS() {
+        return totalSKS;
+    }
+
+    public List<MataKuliah> getMatakuliah() {
+        return matakuliah;
     }
 }

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Mahasiswa {
@@ -6,6 +7,19 @@ public class Mahasiswa {
     private String beasiswa;
     private List<Transaksi> daftarKeuangan;
     private List<KRS> daftarKRS;
+
+    // Constructor
+    public Mahasiswa(String nim, String name, String beasiswa) {
+        this.nim = nim;
+        this.name = name;
+        this.beasiswa = beasiswa;
+        this.daftarKeuangan = new ArrayList<>();
+        this.daftarKRS = new ArrayList<>();
+    }
+
+    public Mahasiswa() {
+
+    }
 
     public String getNim() {
         return nim;
@@ -40,12 +54,12 @@ public class Mahasiswa {
         this.beasiswa = beasiswa;
     }
 
-    public void setDaftarKeuangan(List<Transaksi> daftarKeuangan) {
-        this.daftarKeuangan = daftarKeuangan;
+    public void addDaftarKeuangan(Transaksi newDaftarKeuangan) {
+        this.daftarKeuangan.add(newDaftarKeuangan);
     }
 
-    public void setDaftarKRS(List<KRS> daftarKRS) {
-        this.daftarKRS = daftarKRS;
+    public void addDaftarKRS(KRS newDaftarKRS) {
+        this.daftarKRS.add(newDaftarKRS);
     }
 
 }

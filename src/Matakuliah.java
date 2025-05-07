@@ -4,6 +4,13 @@ public class MataKuliah {
     private String nama;
     private int sks;
 
+    // Constructor
+    public MataKuliah(String kode, String nama, int sks) {
+        this.kode = kode;
+        this.nama = nama;
+        this.sks = sks;
+    }
+
     public String getKode() {
         return kode;
     }

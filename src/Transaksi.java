@@ -5,7 +5,18 @@ public class Transaksi {
     private String status;
     private int semester;
     private int hargaPerSks;
-    private int tahunAkademik;
+    private String periode;
+
+    // Constructor
+    public Transaksi(int biayaBPP, int biayaRegistrasi, String status, int semester,
+            int hargaPerSks, String periode) {
+        this.biayaBPP = biayaBPP;
+        this.biayaRegistrasi = biayaRegistrasi;
+        this.status = status;
+        this.semester = semester;
+        this.hargaPerSks = hargaPerSks;
+        this.periode = periode;
+    }
 
     public int getBiayaBPP() {
         return biayaBPP;
@@ -47,12 +58,12 @@ public class Transaksi {
         this.hargaPerSks = hargaPerSks;
     }
 
-    public int getTahunAkademik() {
-        return tahunAkademik;
+    public String getPeriode() {
+        return periode;
     }
 
-    public void setTahunAkademik(int tahunAkademik) {
-        this.tahunAkademik = tahunAkademik;
+    public void setPeriode(String periode) {
+        this.periode = periode;
     }
 
     public int totalBiaya(int biayaBPP, int biayaRegistrasi, int totalSKS, int hargaPerSks) {

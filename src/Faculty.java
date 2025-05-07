@@ -5,6 +5,12 @@ public class Faculty {
     private String address;
     private List<ProgramStudi> listProdi;
 
+    // Constructor
+    public Faculty(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
     public String getName() {
         return name;
     }
@@ -25,7 +31,7 @@ public class Faculty {
         this.address = address;
     }
 
-    public void setListProdi(List<ProgramStudi> listProdi) {
-        this.listProdi = listProdi;
+    public void addProdi(ProgramStudi newProdi) {
+        listProdi.add(newProdi);
     }
 }
