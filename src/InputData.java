@@ -172,9 +172,6 @@ public class InputData {
 
             // Print success message
             System.out.println("Data berhasil disimpan ke db4o.");
-
-
-            System.out.println("Data berhasil disimpan ke db4o.");
         } finally {
             db.close();
         }

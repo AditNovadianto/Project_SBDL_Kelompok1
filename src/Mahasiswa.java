@@ -18,7 +18,8 @@ public class Mahasiswa {
     }
 
     public Mahasiswa() {
-
+        this.daftarKeuangan = new ArrayList<>();
+        this.daftarKRS = new ArrayList<>();
     }
 
     public String getNim() {

@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class ProgramStudi {
     private String name;
@@ -9,6 +10,7 @@ public class ProgramStudi {
     public ProgramStudi(String name, String code) {
         this.name = name;
         this.code = code;
+        this.listMahasiswa = new ArrayList<>();
     }
 
     public String getName() {

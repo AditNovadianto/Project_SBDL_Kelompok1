@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Faculty {
@@ -9,6 +10,7 @@ public class Faculty {
     public Faculty(String name, String address) {
         this.name = name;
         this.address = address;
+        this.listProdi = new ArrayList<>();
     }
 
     public String getName() {
