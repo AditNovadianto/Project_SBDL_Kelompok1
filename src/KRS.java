@@ -1,9 +1,9 @@
 
 public class KRS {
-    int totalSKS;
-    int semester;
-    String tahunKurikulum;
-    MataKuliah matakuliah;
+    private int totalSKS;
+    private int semester;
+    private String tahunKurikulum;
+    private MataKuliah matakuliah;
 
     public void setTotalSKS(int totalSKS) {
         this.totalSKS = totalSKS;

@@ -1,9 +1,9 @@
 import java.util.List;
 
 public class Faculty {
-    String name;
-    String address;
-    List<ProgramStudi> listProdi;
+    private String name;
+    private String address;
+    private List<ProgramStudi> listProdi;
 
     public String getName() {
         return name;

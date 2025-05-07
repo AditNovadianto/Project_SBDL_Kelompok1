@@ -1,6 +1,6 @@
 public class MahasiswaS1 extends Mahasiswa {
-    String jalurMasuk;
-    String dosenPembimbing;
+    private String jalurMasuk;
+    private String dosenPembimbing;
 
     public String getJalurMasuk() {
         return jalurMasuk;

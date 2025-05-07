@@ -1,9 +1,9 @@
 import java.util.List;
 
 public class ProgramStudi {
-    String name;
-    String code;
-    List<Mahasiswa> listMahasiswa;
+    private String name;
+    private String code;
+    private List<Mahasiswa> listMahasiswa;
 
     public String getName() {
         return name;

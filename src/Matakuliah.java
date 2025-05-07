@@ -1,8 +1,8 @@
 
 public class MataKuliah {
-    String kode;
-    String nama;
-    int sks;
+    private String kode;
+    private String nama;
+    private int sks;
 
     public String getKode() {
         return kode;

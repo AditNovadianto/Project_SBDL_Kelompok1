@@ -1,11 +1,11 @@
 import java.util.List;
 
 public class Mahasiswa {
-    String nim;
-    String name;
-    String beasiswa;
-    List<Transaksi> daftarKeuangan;
-    List<KRS> daftarKRS;
+    private String nim;
+    public String name;
+    private String beasiswa;
+    private List<Transaksi> daftarKeuangan;
+    private List<KRS> daftarKRS;
 
     public String getNim() {
         return nim;

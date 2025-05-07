@@ -1,7 +1,7 @@
 public class MahasiswaS2 extends Mahasiswa {
-    String jalurMasuk;
-    String dosenPembimbing;
-    String asalUniv;
+    private String jalurMasuk;
+    private String dosenPembimbing;
+    private String asalUniv;
 
     public String getJalurMasuk() {
         return jalurMasuk;
@@ -26,5 +26,5 @@ public class MahasiswaS2 extends Mahasiswa {
     public void setAsalUniv(String asalUniv) {
         this.asalUniv = asalUniv;
     }
-    
+
 }

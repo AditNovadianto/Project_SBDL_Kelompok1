@@ -1,11 +1,11 @@
 
 public class Transaksi {
-    int biayaBPP;
-    int biayaRegistrasi;
-    String status;
-    int semester;
-    int hargaPerSks;
-    int tahunAkademik;
+    private int biayaBPP;
+    private int biayaRegistrasi;
+    private String status;
+    private int semester;
+    private int hargaPerSks;
+    private int tahunAkademik;
 
     public int getBiayaBPP() {
         return biayaBPP;
