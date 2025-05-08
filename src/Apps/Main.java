@@ -41,7 +41,7 @@ public class Main {
 					inputTransaksi();
 					break;
 				case 6:
-					inputMahasiswa();
+					showMahasiswa();
 					break;
 				case 7:
 					printKRS();
@@ -56,6 +56,10 @@ public class Main {
 					System.out.println("Pilihan tidak valid. Silakan coba lagi.");
 			}
 		}
+	}
+	
+	private static void showMahasiswa() {
+		
 	}
 
 	private static void printKRS() {
@@ -74,22 +78,74 @@ public class Main {
 	}
 
 	private static void inputKRS() {
-		int totalSKS, semester;
-		String tahunKurikulum, periode;
-		System.out.print("Masukkan Total SKS: ");
-		totalSKS = scanner.nextInt();
-		scanner.nextLine(); // Consume newline character
-		System.out.print("Masukkan Semester: ");
-		semester = scanner.nextInt();
-		scanner.nextLine(); // Consume newline character
-		System.out.print("Masukkan Tahun Kurikulum: ");
-		tahunKurikulum = scanner.nextLine();
-		System.out.print("Masukkan Periode: ");
-		periode = scanner.nextLine();
-		KRS krs = new KRS(totalSKS, semester, tahunKurikulum, periode);
-		// Tambahkan matakuliah ke KRS
+	    int totalSKS, semester;
+	    String tahunKurikulum, periode;
+	    System.out.print("Masukkan Total SKS: ");
+	    totalSKS = scanner.nextInt();
+	    scanner.nextLine(); // Consume newline character
+	    System.out.print("Masukkan Semester: ");
+	    semester = scanner.nextInt();
+	    scanner.nextLine(); // Consume newline character
+	    System.out.print("Masukkan Tahun Kurikulum: ");
+	    tahunKurikulum = scanner.nextLine();
+	    System.out.print("Masukkan Periode: ");
+	    periode = scanner.nextLine();
 
+	    KRS krs = new KRS(totalSKS, semester, tahunKurikulum, periode);
 
+	    ObjectContainer db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "dataSBDL.db4o");
+	    try {
+	        // Ambil semua data matakuliah
+	        List<Matakuliah> listMatkul = db.query(Matakuliah.class);
+
+	        if (listMatkul.isEmpty()) {
+	            System.out.println("\nTidak ada data Matakuliah. Silakan tambahkan data terlebih dahulu.\n");
+	            return; // Keluar dari inputKRS karena tidak ada data
+	        }
+
+	        // Tampilkan daftar matakuliah
+	        System.out.println("\nDaftar Matakuliah:");
+	        for (int i = 0; i < listMatkul.size(); i++) {
+	            Matakuliah mk = listMatkul.get(i);
+	            System.out.println((i + 1) + ". Kode: " + mk.getKode());
+	            System.out.println("   Nama: " + mk.getNama());
+	            System.out.println("   SKS: " + mk.getSks());
+	            System.out.println("----------------------------");
+	        }
+
+	        // Pilih matakuliah
+	        while (true) {
+	            System.out.print("Pilih nomor matakuliah yang akan dimasukkan ke dalam KRS (-1 untuk selesai): ");
+	            int choice = -1;
+	            try {
+	                choice = scanner.nextInt();
+	                scanner.nextLine(); // consume newline
+	            } catch (InputMismatchException e) {
+	                System.out.println("Input harus berupa angka. Coba lagi.");
+	                scanner.nextLine(); // flush invalid input
+	                continue;
+	            }
+
+	            if (choice == -1) {
+	                break;
+	            }
+
+	            if (choice >= 1 && choice <= listMatkul.size()) {
+	                Matakuliah selectedMatkul = listMatkul.get(choice - 1);
+	                krs.setMatakuliah(selectedMatkul);
+	                System.out.println("Matakuliah '" + selectedMatkul.getNama() + "' berhasil ditambahkan ke KRS.\n");
+	            } else {
+	                System.out.println("Pilihan tidak valid. Silakan coba lagi.\n");
+	            }
+	        }
+
+	        // Simpan KRS setelah selesai memilih matkul
+	        db.store(krs);
+	        System.out.println("\nKRS berhasil disimpan ke database.\n");
+
+	    } finally {
+	        db.close();
+	    }
 	}
 
 	private static void inputMatakuliah() {
@@ -109,7 +165,7 @@ public class Main {
 				Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "dataSBDL.db4o");
 		try {
 			db.store(matakuliah);
-			System.out.println("Data Matakuliah berhasil disimpan ke database.");
+			System.out.println("Data Matakuliah berhasil disimpan ke database.\n");
 		} finally {
 			db.close();
 		}
@@ -159,7 +215,7 @@ public class Main {
 				Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "dataSBDL.db4o");
 		try {
 			db.store(mahasiswaS2);
-			System.out.println("Data Mahasiswa S2 berhasil disimpan ke database.");
+			System.out.println("Data Mahasiswa S2 berhasil disimpan ke database.\n");
 		} finally {
 			db.close();
 		}
@@ -183,7 +239,7 @@ public class Main {
 				Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "dataSBDL.db4o");
 		try {
 			db.store(mahasiswaS1);
-			System.out.println("Data Mahasiswa S1 berhasil disimpan ke database.");
+			System.out.println("Data Mahasiswa S1 berhasil disimpan ke database.\n");
 		} finally {
 			db.close();
 		}
