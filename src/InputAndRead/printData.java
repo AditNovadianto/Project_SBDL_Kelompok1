@@ -1,9 +1,10 @@
 package InputAndRead;
+
 import com.db4o.*;
 
 import Apps.KRS;
 import Apps.Matakuliah;
-
+import Apps.Transaksi;
 import java.util.List;
 
 
@@ -13,15 +14,19 @@ public class printData {
         ObjectContainer db =
                 Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "dataSBDL.db4o");
         try {
-            // Ambil semua KRS dari database
-            List<KRS> krsList = db.query(KRS.class);
-            for (KRS krs : krsList) {
-                System.out.println(
-                        "KRS: " + krs.getTahunKurikulum() + ", Semester: " + krs.getSemester());
-                System.out.println("Mata Kuliah:");
-                for (Matakuliah mk : krs.getMatakuliah()) {
-                    System.out.println("Kode: " + mk.getKode() + ", Nama: " + mk.getNama()
-                            + ", SKS: " + mk.getSks());
+            // Print Transaksi dan Tagihan
+            List<Transaksi> transaksiList = db.query(Transaksi.class);
+            for (Transaksi transaksi : transaksiList) {
+                System.out.println("Kode Pembayaran: " + transaksi.getKodePembayaran());
+                System.out.println("Semester: " + transaksi.getSemester());
+                System.out.println("Periode: " + transaksi.getPeriode());
+                System.out.println("Status: " + transaksi.getStatus());
+                System.out.println("Daftar Tagihan:");
+                for (Apps.Tagihan tagihan : transaksi.getDaftarTagihan()) {
+                    System.out.println("  - Kode Tagihan: " + tagihan.getKodeTagihan());
+                    System.out.println("    Jenis Tagihan: " + tagihan.getJenisTagihan());
+                    System.out.println("    Cicilan Ke: " + tagihan.getCicilanKe());
+                    System.out.println("    Nominal: " + tagihan.getNominal());
                 }
             }
         } finally {

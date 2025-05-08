@@ -210,13 +210,13 @@ public class InputData {
             Transaksi transaksi3 = new Transaksi("PAY/20232/0007248", 2, "20232");
             transaksi3.addDaftarTagihan(tg5);
             transaksi3.addDaftarTagihan(tg6);
-            Transaksi transaksi4 = new Transaksi("PAY/20233/0000661", 2, "20241");
+            Transaksi transaksi4 = new Transaksi("PAY/20233/0000661", 4, "20241");
             transaksi4.addDaftarTagihan(tg7);
             transaksi4.addDaftarTagihan(tg8);
-            Transaksi transaksi5 = new Transaksi("PAY/20241/0002747", 2, "20241");
+            Transaksi transaksi5 = new Transaksi("PAY/20241/0002747", 4, "20241");
             transaksi5.addDaftarTagihan(tg9);
             transaksi5.addDaftarTagihan(tg10);
-            Transaksi transaksi6 = new Transaksi("PAY/20241/0008508", 2, "20241");
+            Transaksi transaksi6 = new Transaksi("PAY/20241/0008508", 4, "20241");
             transaksi6.addDaftarTagihan(tg11);
             transaksi6.addDaftarTagihan(tg12);
 
@@ -230,10 +230,10 @@ public class InputData {
             Transaksi transaksi9 = new Transaksi("PAY/20232/0008297", 2, "20232");
             transaksi9.addDaftarTagihan(tg17);
             transaksi9.addDaftarTagihan(tg18);
-            Transaksi transaksi10 = new Transaksi("PAY/20241/0000770", 2, "20241");
+            Transaksi transaksi10 = new Transaksi("PAY/20241/0000770", 4, "20241");
             transaksi10.addDaftarTagihan(tg19);
             transaksi10.addDaftarTagihan(tg20);
-            Transaksi transaksi11 = new Transaksi("PAY/20241/0005270", 2, "20241");
+            Transaksi transaksi11 = new Transaksi("PAY/20241/0005270", 4, "20241");
             transaksi11.addDaftarTagihan(tg21);
             transaksi11.addDaftarTagihan(tg22);
 
@@ -249,14 +249,14 @@ public class InputData {
             Transaksi transaksi16 = new Transaksi("PAY/20232/0008614", 2, "20231");
             transaksi16.addDaftarTagihan(tg29);
             transaksi16.addDaftarTagihan(tg30);
-            Transaksi transaksi17 = new Transaksi("PAY/20241/0000163", 2, "20241");
+            Transaksi transaksi17 = new Transaksi("PAY/20241/0000163", 4, "20241");
             transaksi17.addDaftarTagihan(tg31);
             transaksi17.addDaftarTagihan(tg32);
-            Transaksi transaksi18 = new Transaksi("PAY/20241/0006049", 2, "20241");
+            Transaksi transaksi18 = new Transaksi("PAY/20241/0006049", 4, "20241");
             transaksi18.addDaftarTagihan(tg33);
-            Transaksi transaksi19 = new Transaksi("PAY/20241/0006051", 2, "20241");
+            Transaksi transaksi19 = new Transaksi("PAY/20241/0006051", 4, "20241");
             transaksi19.addDaftarTagihan(tg34);
-            Transaksi transaksi20 = new Transaksi("PAY/20241/0009716", 2, "20241");
+            Transaksi transaksi20 = new Transaksi("PAY/20241/0009716", 4, "20241");
             transaksi20.addDaftarTagihan(tg35);
             transaksi20.addDaftarTagihan(tg36);
             // Simpan transaksi ke dalam database
